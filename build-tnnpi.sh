@@ -23,6 +23,7 @@ cp -R stage-tnnpi pi-gen/stage-tnnpi
 # only minimalsystem
 touch pi-gen/stage3/SKIP pi-gen/stage4/SKIP pi-gen/stage5/SKIP
 touch pi-gen/stage4/SKIP_IMAGES pi-gen/stage5/SKIP_IMAGES
+rm pi-gen/stage2/EXPORT_IMAGE pi-gen/stage2/EXPORT_NOOBS
 
 case "$OSTYPE" in
   darwin*)
