@@ -17,8 +17,12 @@ cd ..
 cp config pi-gen/config
 
 # copy custom stage
-[ -e pi-gen/stage-tnn ] && rm -R pi-gen/stage-tnn
-cp -R stage-tnn pi-gen/stage-tnn
+[ -e pi-gen/stage-tnnpi ] && rm -R pi-gen/stage-tnnpi
+cp -R stage-tnnpi pi-gen/stage-tnnpi
+
+# only minimalsystem
+touch pi-gen/stage3/SKIP pi-gen/stage4/SKIP pi-gen/stage5/SKIP
+touch pi-gen/stage4/SKIP_IMAGES pi-gen/stage5/SKIP_IMAGES
 
 case "$OSTYPE" in
   darwin*)
@@ -30,5 +34,5 @@ esac
 echo "Running build..."
 cd pi-gen
 #PRESERVE_CONTAINER=0 CONTINUE=0 ./build-docker.sh
-CLEAN=1 ./build.sh
-
+#sudo CLEAN=1 ./build.sh
+sudo ./build.sh
