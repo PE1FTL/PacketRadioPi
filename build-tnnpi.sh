@@ -22,8 +22,8 @@ cp -R stage-tnnpi pi-gen/stage-tnnpi
 
 # only minimalsystem
 touch pi-gen/stage3/SKIP pi-gen/stage4/SKIP pi-gen/stage5/SKIP
-touch pi-gen/stage4/SKIP_IMAGES pi-gen/stage5/SKIP_IMAGES
-rm pi-gen/stage2/EXPORT_IMAGE pi-gen/stage2/EXPORT_NOOBS
+touch pi-gen/stage2/SKIP_NOOBS pi-gen/stage2/SKIP_IMAGES pi-gen/stage4/SKIP_IMAGES pi-gen/stage5/SKIP_IMAGES
+#rm pi-gen/stage2/EXPORT_IMAGE pi-gen/stage2/EXPORT_NOOBS
 
 case "$OSTYPE" in
   darwin*)
@@ -35,5 +35,5 @@ esac
 echo "Running build..."
 cd pi-gen
 #PRESERVE_CONTAINER=0 CONTINUE=0 ./build-docker.sh
-#sudo CLEAN=1 ./build.sh
-sudo ./build.sh
+sudo CLEAN=1 ./build.sh
+#sudo ./build.sh
