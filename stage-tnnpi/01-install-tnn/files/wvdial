@@ -1,6 +1,0 @@
-noauth
-name wvdial
-usepeerdns
-defaultroute
-replacedefaultroute
-debug

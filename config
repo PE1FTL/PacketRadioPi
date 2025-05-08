@@ -21,7 +21,7 @@ FIRST_USER_PASS='packetradio'
 ENABLE_SSH=1
 
 # some settings
-STAGE_LIST='stage0 stage1 stage2 stage-tnn'
+STAGE_LIST='stage0 stage1 stage2 stage-tnnpi'
 CLEAN=0
 
 DEPLOY_COMPRESSION='zip'
