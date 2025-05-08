@@ -1,18 +1,31 @@
+# Automatically connect to a wifi network on first boot
+#WPA_ESSID='my_ssid'
+#WPA_PASSWORD='my_password'
+#WPA_COUNTRY='DE'
+
+# Hostname
 IMG_NAME='PacketRadioPi'
-PI_GEN_RELEASE='PR reference'
+TARGET_HOSTNAME='PacketRadioPi'
+
+# Language
+LOCALE_DEFAULT='de_DE.UTF-8'
+KEYBOARD_KEYMAP=de
+KEYBOARD_LAYOUT=de
+TIMEZONE_DEFAULT=Europe/Berlin
+
+# User name and password
+FIRST_USER_NAME='pi'
+FIRST_USER_PASS='packetradio'
+
+# Enable ssh server for remote log in
+ENABLE_SSH=1
+
+# some settings
 STAGE_LIST='stage0 stage1 stage2 stage-tnn'
 CLEAN=0
-ENABLE_SSH=1
+
 DEPLOY_COMPRESSION='zip'
 USE_QCOW2=0
 USE_QEMU=0
-LOCALE_DEFAULT='de_DE.UTF-8'
-# HoneyPi defaults
-TARGET_HOSTNAME='PR_Pi' # TARGET_HOSTNAME is also set by HoneyPi/installer.sh
-FIRST_USER_NAME='pi'
+
 DISABLE_FIRST_BOOT_USER_RENAME=1
-FIRST_USER_PASS='packetradio'
-TIMEZONE_DEFAULT='Europe/Berlin' # TIMEZONE_DEFAULT is also set by HoneyPi/installer.sh
-WPA_COUNTRY='DE'
-KEYBOARD_KEYMAP='gb'
-KEYBOARD_LAYOUT='English (UK)'
