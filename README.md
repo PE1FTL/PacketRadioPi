@@ -46,8 +46,8 @@ brew install coreutils
 ```
 
 ### Danksagung
-basierend auf [HoneyPi-Build-Raspbian](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian)
-
+* basierend auf [HoneyPi-Build-Raspbian](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian)
+* basierend auf [Rasbian Images selbst bauen](https://javan.de/raspbian-images-selbst-bauen/)
 
 
 
