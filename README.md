@@ -2,17 +2,17 @@
 
 # PacketRadioPi Image Generator 
 
-_Tool used to create the PacketRadioPi images. Based on raspberrypi.org Raspberry Pi OS Lite images_
+_Tool zum Erstellen der PacketRadioPi-Images. Basierend auf Raspberry Pi OS Lite-Images von raspberrypi.org_
 
-This build script uses the official Pi-Gen build script (https://github.com/RPi-Distro/pi-gen). It adds a custom stage to the default Raspberry Pi OS Lite (previously known as Raspbian Lite) image build.
+Dieses Build-Skript verwendet das offizielle Pi-Gen-Build-Skript (https://github.com/RPi-Distro/pi-gen). Es fügt dem Standard-Image-Build von Raspberry Pi OS Lite (früher bekannt als Raspbian Lite) eine benutzerdefinierte Stufe hinzu
 
-## Quick start
+## Schnellstart
 
-1. [Download latest release](https://gitea.home.pfeiffer-privat.de/ppfeiffer/PacketRadioPi/releases) *** still to be done
-2. Burn image on sd card
-3. Power on your Pi, after your first boot it does automatically reboot, wait some time after the boot. 
-4. The PackeRadioPi services are automatically starting.
-5. More information on controlling the software can be found in the [main repo]( ). The default SSH password in this pre-built PacketRadioPi image is `packetradio`. 
+1. [Download latest release](https://gitea.home.pfeiffer-privat.de/ppfeiffer/PacketRadioPi/releases) *** noch nicht realisiert ***
+2. Image auf SD-Karte schreiben
+3. Schalten Sie Ihren Pi ein. Nach dem ersten Booten wird er automatisch neu gestartet. Warten Sie nach dem Booten einige Zeit. 
+4. Die PackeRadioPi-Dienste werden automatisch gestartet.
+5. Weitere Informationen zur Steuerung der Software finden Sie im Repo-Wiki . Das Standard-SSH-Passwort in diesem vorgefertigten PacketRadioPi-Image lautet 'packetradio'. 
 7. Have fun!
 
 ```
@@ -20,34 +20,34 @@ Username: pi
 Password: packetradio
 ```
 
-## Development
+## Entwicklung
 
-### Build the Image
-Be sure that you have installed Docker on your System. You will also need a git client installed.
-Just start the script by calling:
+### Erstellen des Images
+Stellen Sie sicher, dass Docker auf Ihrem System installiert ist. Außerdem benötigen Sie einen Git-Client. Starten Sie das Skript einfach mit folgendem Aufruf:
 
 ```
-sudo ./build-honeypi.sh
+sudo ./build-tnnpi.sh
 ```
 
-### Clean up
-For cleaning up the workspace just call
+### Aufräumen
+Für die Reinigung des Arbeitsbereichs rufen Sie einfach an
 
 ```
 sudo ./clean.sh
 ```
+### Build-Ordner
+Der Build wird im Ordner abgelegt ```pi-gen/deploy/```
 
-### Build folder
-The build will be placed in the folder ```pi-gen/deploy/```
-
-### Requirements
-
-For MacOS:
+### Anforderungen
+Für MacOS:
 
 ```
 brew install coreutils
 ```
 
-## Acknowledgments
-* based on [HoneyPi-Build-Raspbian](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian)
+### Danksagung
+basierend auf [HoneyPi-Build-Raspbian](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian)
+
+
+
 
