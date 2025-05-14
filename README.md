@@ -1,5 +1,3 @@
-# https://javan.de/raspbian-images-selbst-bauen/
-
 # PacketRadioPi Image Generator 
 
 _Tool zum Erstellen der PacketRadioPi-Images. Basierend auf Raspberry Pi OS Lite-Images von raspberrypi.org_
