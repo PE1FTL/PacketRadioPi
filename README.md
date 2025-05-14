@@ -1,23 +1,23 @@
 # https://javan.de/raspbian-images-selbst-bauen/
 
-# HoneyPi Image Generator [![Build Status](https://travis-ci.com/Honey-Pi/HoneyPi-Build-Raspbian.svg?branch=master)](https://travis-ci.com/Honey-Pi/HoneyPi-Build-Raspbian) [![HoneyPi CI release](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian/actions/workflows/release.yml)
-_Tool used to create the HoneyPi images. Based on raspberrypi.org Raspberry Pi OS Lite images_
+# PacketRadioPi Image Generator 
+
+_Tool used to create the PacketRadioPi images. Based on raspberrypi.org Raspberry Pi OS Lite images_
 
 This build script uses the official Pi-Gen build script (https://github.com/RPi-Distro/pi-gen). It adds a custom stage to the default Raspberry Pi OS Lite (previously known as Raspbian Lite) image build.
 
 ## Quick start
 
-1. [Download latest release](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian/releases)
+1. [Download latest release](https://gitea.home.pfeiffer-privat.de/ppfeiffer/PacketRadioPi/releases) *** still to be done
 2. Burn image on sd card
-3. Power on your Pi, after your first boot it does automatically reboot, wait some time after the boot. The HoneyPi services are automatically starting.
-4. Press the hardware button connected to your Raspberry Pi to start the 'HoneyPi'-AccessPoint (IP: `192.168.4.1`, WiFi-Password: `HoneyPi!`) or connect your Raspberry to your Homenetwork-WiFi.
-5. Visit with your browser http://IpOfYourPi/ or http://honeypi.local/ for further configuration.
-6. More information on controlling the software can be found in the [main repo](https://github.com/Honey-Pi/HoneyPi). The default SSH password in this pre-built HoneyPi image is `hivescale`. 
+3. Power on your Pi, after your first boot it does automatically reboot, wait some time after the boot. 
+4. The PackeRadioPi services are automatically starting.
+5. More information on controlling the software can be found in the [main repo]( ). The default SSH password in this pre-built PacketRadioPi image is `packetradio`. 
 7. Have fun!
 
 ```
 Username: pi
-Password: hivescale
+Password: packetradio
 ```
 
 ## Development
@@ -49,5 +49,5 @@ brew install coreutils
 ```
 
 ## Acknowledgments
-* Special thanks to [FabScanPi](https://github.com/mariolukas/FabScanPi-Build-Raspbian) for this blueprint.
-* Thanks to [HyperBian](https://github.com/hyperion-project/HyperBian) for the GitHub Action.
+* based on [HoneyPi-Build-Raspbian](https://github.com/Honey-Pi/HoneyPi-Build-Raspbian)
+
