@@ -31,7 +31,7 @@ jobs:
           # turn the detached message off
           git config --global advice.detachedHead false
           cd pi-gen && git fetch && git fetch --tags
-          git checkout 2024-03-12-raspios-bullseye
+          git checkout 2021-03-04-raspbian-buster
           cp ./../config ./config
           cp -R ./../stage-tnnpi ./stage-tnnpi
           sudo ./build.sh
