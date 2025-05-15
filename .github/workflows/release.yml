@@ -1,0 +1,63 @@
+name: PacketRadioPi CI release
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+# To cancel a currently running workflow from the same PR, branch or tag when a new workflow is triggered
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  rpi-image:
+    name: "Build 🍯-🐝-Image"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current date
+        shell: bash
+        run: echo "START_TIME=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # install dependencies
+      - name: 🔽 Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install --no-install-recommends coreutils quilt parted qemu-utils qemu-user-static debootstrap zerofree zip dosfstools libarchive-tools libcap2-bin grep rsync xz-utils file git curl bc
+      # build image
+      - name: 🚧 Build
+        run: |
+          git clone https://github.com/RPi-Distro/pi-gen pi-gen
+          # turn the detached message off
+          git config --global advice.detachedHead false
+          cd pi-gen && git fetch && git fetch --tags
+          git checkout 2021-03-04-raspbian-buster
+          cp ./../config ./config
+          cp -R ./../stage-tnnpi ./stage-tnnpi
+          sudo ./build.sh
+          sudo mv ./deploy/*.zip ./deploy/prpi.zip
+          sudo chown -fR $(stat -c "%U:%G" .) ./deploy
+      # delete previous releases
+      - name: 🗑️ Delete previous releases
+        uses: dev-drprasad/delete-older-releases@v0.3.4
+        with:
+          keep_latest: 0
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # create release and upload image
+      - name: 🚀 Create release and upload image
+        uses: svenstaro/upload-release-action@2.9.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: pi-gen/deploy/prpi.zip
+          asset_name: ${{ env.START_TIME }}-PacketRadioPi-armhf-lite.zip
+          tag: ${{ env.START_TIME }}-PacketRadioPi
+          release_name: ${{ env.START_TIME }}-PackeRadioPi-Image
+          body: "Raspberry Pi OS armhf Lite image with PacketRadioPi pre installed. Release created by GitHub action."
+          overwrite: true
+      - name: Add artifact to Workflow
+        uses: actions/upload-artifact@v4
+        with:
+            name: PacketRadioPi-Image
+            path: pi-gen/deploy/prpi.zip
