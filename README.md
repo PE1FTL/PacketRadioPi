@@ -1,4 +1,5 @@
 # PacketRadioPi Image Generator 
+[![Build Status](https://drone.home.pfeiffer-privat.de/api/badges/PacketRadioRaspi/PacketRadioPi/status.svg)](https://drone.home.pfeiffer-privat.de/PacketRadioRaspi/PacketRadioPi)
 
 _Tool zum Erstellen der PacketRadioPi-Images. Basierend auf Raspberry Pi OS Lite-Images von raspberrypi.org_
 
