@@ -7,7 +7,7 @@ Dieses Build-Skript verwendet das offizielle Pi-Gen-Build-Skript (https://github
 
 ## Schnellstart
 
-1. [Download latest release](https://gitea.home.pfeiffer-privat.de/ppfeiffer/PacketRadioPi/releases) *** noch nicht realisiert ***
+1. [Download latest release](https://github.com/PE1FTL/PacketRadioPi/releases)
 2. Image auf SD-Karte schreiben
 3. Schalten Sie Ihren Pi ein. Nach dem ersten Booten wird er automatisch neu gestartet. Warten Sie nach dem Booten einige Zeit. 
 4. Das Standard-SSH-Passwort in diesem vorgefertigten PacketRadioPi-Image lautet 'packetradio'. Der SSH-Dienst startet automatisch.
