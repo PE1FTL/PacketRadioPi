@@ -1,6 +1,6 @@
 # PacketRadioPi Image Generator 
 [![Build Status](https://drone.home.pfeiffer-privat.de/api/badges/PacketRadioRaspi/PacketRadioPi/status.svg)](https://drone.home.pfeiffer-privat.de/PacketRadioRaspi/PacketRadioPi)
-
+[![PacketRadioPi CI release](https://github.com/PE1FTL/PacketRadioPi/actions/workflows/release.yml/badge.svg?branch=main&event=workflow_run)](https://github.com/PE1FTL/PacketRadioPi/actions/workflows/release.yml)
 _Tool zum Erstellen der PacketRadioPi-Images. Basierend auf Raspberry Pi OS Lite-Images von raspberrypi.org_
 
 Dieses Build-Skript verwendet das offizielle Pi-Gen-Build-Skript (https://github.com/RPi-Distro/pi-gen). Es fügt dem Standard-Image-Build von Raspberry Pi OS Lite (früher bekannt als Raspbian Lite) eine benutzerdefinierte Stufe hinzu
