@@ -2,7 +2,7 @@ name: PacketRadioPi CI release
 on:
   push:
     branches:
-      - 'releases/**'
+      - main
 
   workflow_dispatch:
 # To cancel a currently running workflow from the same PR, branch or tag when a new workflow is triggered
