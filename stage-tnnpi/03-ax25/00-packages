@@ -1,0 +1,8 @@
+build-essential
+zlib1g-dev
+libncursesw5-dev
+autotools-dev
+autoconf
+automake
+libtool
+m4

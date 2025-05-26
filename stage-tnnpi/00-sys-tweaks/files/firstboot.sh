@@ -9,6 +9,9 @@ echo 'Resizing root partition'
 
 raspi-config nonint do_expand_rootfs
 
+echo 'set memory-split'
+raspi-config nonint do_memory_split 16
+
 # Get current date from debian time server
 ntpdate 0.debian.pool.ntp.org
 
