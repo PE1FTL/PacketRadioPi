@@ -9,7 +9,7 @@ EOF
 }
 
 # configure firstboot options
-mkdir "${ROOTFS_DIR}/usr/local/ax25"
+mkdir -p "${ROOTFS_DIR}/usr/local/ax25/"
 install -m 775 files/InstAX25.sh "${ROOTFS_DIR}/usr/local/ax25/InstAX25.sh"
 
 
