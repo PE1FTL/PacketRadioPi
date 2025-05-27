@@ -7,9 +7,13 @@ run_in_chroot() {
 $1
 EOF
 }
+#  make build-dir
+echo "mk build dir"
+run_in_chroot "
+mkdir -p ${ROOTFS_DIR}/usr/local/ax25/
+"
 
 # configure firstboot options
-mkdir -p "${ROOTFS_DIR}/usr/local/ax25/"
 install -m 775 files/InstAX25.sh "${ROOTFS_DIR}/usr/local/ax25/InstAX25.sh"
 
 
