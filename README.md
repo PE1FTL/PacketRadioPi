@@ -1,5 +1,6 @@
 # PacketRadioPi Image Generator 
 [![PacketRadioPi CI release](https://github.com/PE1FTL/PacketRadioPi/actions/workflows/release.yml/badge.svg)](https://github.com/PE1FTL/PacketRadioPi/actions/workflows/release.yml)
+[![PacketRadioPi CI release](https://github.com/PE1FTL/PacketRadioPi/actions/workflows/release.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/PE1FTL/PacketRadioPi/actions/workflows/release.yml)
 
 _Tool zum Erstellen der PacketRadioPi-Images. Basierend auf Raspberry Pi OS Lite-Images von raspberrypi.org_
 
