@@ -20,7 +20,6 @@ install -m 775 files/InstAX25.sh "${ROOTFS_DIR}/usr/local/ax25/InstAX25.sh"
 # compile tnn-ax25
 echo "compile tnn-ax25"
 run_in_chroot "
-cd ${ROOTFS_DIR}/usr/local/ax25
-sudo chmod a+x InstAX25.sh
-sudo ./InstAX25.sh
+cd /usr/local/ax25
+./InstAX25.sh
 "
