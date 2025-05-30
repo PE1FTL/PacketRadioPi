@@ -50,7 +50,7 @@ run_in_chroot "update-ca-certificates --fresh"
 echo "Cloning tnn repository"
 if [ ! -d "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/tnn-beta" ]; then
   run_in_chroot "
-  git clone https://gitea.home.pfeiffer-privat.de/ppfeiffer/tnn179cb55beta.git /home/${FIRST_USER_NAME}/tnn-beta
+  git clone https://github.com/PE1FTL/tnn179cb55beta.git /home/${FIRST_USER_NAME}/tnn-beta
   chmod -R 775 /home/${FIRST_USER_NAME}/tnn-beta
   chown -R pi:pi /home/${FIRST_USER_NAME}/tnn-beta
   "
