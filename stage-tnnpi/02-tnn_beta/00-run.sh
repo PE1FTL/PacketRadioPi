@@ -30,3 +30,6 @@ make baseinstall
 # set baseconfig
 echo "set base config"
 install -m 775 files/tnn.ini "${ROOTFS_DIR}/usr/local/tnn/tnn.ini"
+install -m 775 files/ax25ip.cfg "${ROOTFS_DIR}/usr/local/tnn/ax25ip.cfg"
+install -m 775 files/tnn179.pas "${ROOTFS_DIR}/usr/local/tnn/tnn179.pas"
+install -m 775 files/tnn179.tnb "${ROOTFS_DIR}/usr/local/tnn/tnn179.tnb"

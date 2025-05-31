@@ -3,3 +3,5 @@ git
 dialog
 conspy
 mc
+tmux
+socat
