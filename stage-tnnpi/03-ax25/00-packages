@@ -1,8 +1,3 @@
-build-essential
-zlib1g-dev
-libncursesw5-dev
-autotools-dev
-autoconf
-automake
-libtool
-m4
+libax25
+ax25-tools
+ax25-apps
